@@ -1,0 +1,112 @@
+/**index.wxss**/
+
+page {
+  /* overflow: hidden; */
+}
+
+.slider {
+  width: 650rpx;
+  margin: 50rpx auto;
+}
+
+.task_text {
+  text-align: center;
+  margin: 55rpx auto;
+  height: 120rpx;
+}
+.task_title {
+  font-size: 35rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+}
+.task_desc {
+  font-size: 30rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  color: #999999;
+}
+
+.task_cate {
+  display: flex;
+  width: 660rpx;
+  flex-wrap: wrap;
+  text-align: center;
+  margin: 0 auto;
+}
+.cate_item{
+  margin-bottom: 50rpx;
+}
+.cate_icon {
+  width: 220rpx;
+  height: 70rpx;
+}
+.cate_icon image {
+  width: 50rpx;
+  height: 50rpx;
+}
+.cate_text {
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+}
+.active {
+  color: #E7624F;
+}
+
+.start_button {
+  width: 280rpx;
+  height: 90rpx;
+  border: 2px solid #E7624F;
+  color: #E7624F;
+  border-radius: 20rpx;
+  line-height: 90rpx;
+  text-align: center;
+  margin: 40rpx auto;
+}
+
+.clock {
+  /* height: 9999rpx; */
+  overflow: hidden;
+  background-color: #E7624F;
+}
+
+.progress {
+  position: relative;
+  width: 400rpx;
+  height: 400rpx;
+  /* background: orange; */
+  margin: 140rpx auto;
+}
+.progress_bg,
+.progress_active {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 400rpx;
+  height: 400rpx;
+}
+.progress_text {
+  position: absolute;
+  top: 170rpx;
+  left: 120rpx;
+  width: 160rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 35rpx;
+  color: aliceblue;
+  text-align: center;
+}
+
+.finish,
+.pause,
+.continue,
+.cancel {
+  width: 280rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: aliceblue;
+  border: 3rpx solid #ffffff;
+  border-radius: 20rpx;
+  margin: 0 auto 20rpx auto; /* 左右居中,上0下20 */
+}

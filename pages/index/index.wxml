@@ -1,0 +1,37 @@
+<!--index.wxml-->
+<view hidden="{{clockShow}}">
+  <view class="slider">
+    <!-- activeColor(已选择的颜色) show-value(显示数值) slider(滑块) --> 
+    <slider min="1" max="60" show-value value="{{time}}" bindchange="sliderChange" activeColor="#E7624F" backgroundColor="#666666"></slider> 
+  </view> 
+
+  <view class="task_text">
+    <view class="task_title">选择一个任务</view>
+    <view class="task_desc">在接下来的{{time}}分钟,专注做这件事</view>
+  </view>
+
+  <view class="task_cate">
+    <view wx:for="{{cateArr}}" class="cate_item" wx:key="cate" bindtap="clickCate" data-index="{{index}}" >
+      <view class="cate_icon"><image src="../../images/{{item.icon}}.png"></image></view>
+      <view class="cate_text {{index == cateActive ? 'active' : '' }}">{{item.text}}</view>
+    </view>
+  </view>
+
+  <view class="start_button" bindtap="start">开始专注</view>
+</view>
+
+<view class="clock" hidden="{{!clockShow}}" style="height: {{clockHeight}}rpx;">
+  <view class="progress">
+    <canvas canvas-id="progress_bg" class="progress_bg"></canvas>
+    <canvas canvas-id="progress_active" class="progress_active"></canvas>
+    <view class="progress_text">{{timeStr}}</view>
+  </view>
+  <view class="btns">
+    <view class="finish" bindtap="finish" wx:if="{{finishShow}}">完成</view>
+    <view class="pause" bindtap="pause" wx:if="{{pauseShow}}">暂停</view>
+    <view class="twinsBtn" wx:if="{{continueCancelShow}}">
+      <view class="continue" bindtap="continue">继续</view>
+      <view class="cancel" bindtap="cancel">放弃</view>
+    </view>
+  </view>
+</view>
